@@ -1,7 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const mysql = require("mysql");
 const cors = require("cors");
+
+const port = process.env.PORT;
 
 app.use(cors());
 app.use(express.json());
@@ -77,6 +80,6 @@ app.delete("/delete/:id",(req,res)=>{
     );
 })
 
-app.listen(3001,()=>{
-    console.log("Corriendo en el puerto 3001")
+app.listen(port,()=>{
+    console.log(`Corriendo en el puerto ${port}`)
 })
