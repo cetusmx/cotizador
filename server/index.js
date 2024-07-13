@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-    host:"localhost:3306",
+    host:"sealmarket.mx:3306",
     user: "sealmark_wp373",
     password: "t#gLZi3fSD^W",
     database: "sealmark_empleados_crud"
